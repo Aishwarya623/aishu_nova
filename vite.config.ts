@@ -31,7 +31,15 @@ export default defineConfig({
   root: path.resolve(__dirname, "client"),
   base: '/aishu_nova/', 
   build: {
-    outDir: path.resolve(__dirname, "dist"),
-    emptyOutDir: true,
+    outDir: path.resolve(__dirname, "dist"),  // Set the output directory to 'dist'
+    emptyOutDir: true,  // Clean the output directory before build
+    assetsDir: "public",
+  },
+  server: {
+    port: 3000, 
+    open: true,  // Automatically open the browser
+  watch: {
+    usePolling: true, // This helps with file system watching in some environments
+  }, // Change to another port if 3000 is causing issues
   },
 });
