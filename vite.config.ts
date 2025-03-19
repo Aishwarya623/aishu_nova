@@ -30,7 +30,8 @@ export default defineConfig({
   },
   root: path.resolve(__dirname, "client"),
   build: {
-    outDir: path.resolve(__dirname, "dist/public"),
+    outDir: path.resolve(__dirname, "dist"), // Output to dist, not dist/public
     emptyOutDir: true,
   },
+  base: '/aishu_nova/', // Add this for GitHub Pages deployment
 });
